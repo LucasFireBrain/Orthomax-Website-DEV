@@ -16,9 +16,9 @@ $(document).ready(function () {
     }
   });
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     var navBar = document.querySelector('nav');
-    
+
     if (window.scrollY > 40) {
       navBar.classList.add('scrolled');
     } else {
@@ -26,7 +26,10 @@ $(document).ready(function () {
     }
   });
 
-  
+  // UpdateScrollPos
+
+  // Event listener to scroll to top when the page is loaded
+  window.onload = document.documentElement.scrollBy(0,1);
 
   // Back to top button
   var backToTopButton = $('#back-to-top');
@@ -67,7 +70,7 @@ $(document).ready(function () {
 
   // Function to get the language preference from local storage
   function getLanguage() {
-    if (localStorage.getItem('language') === null){
+    if (localStorage.getItem('language') === null) {
       return 'es'; // default language
     }
     else return localStorage.getItem('language');
@@ -160,7 +163,7 @@ $(document).ready(function () {
 
       // Append the button to the container
       readMoreContainer.appendChild(readMoreButton);
-      
+
       // Append the container to the section
       aboutSection.appendChild(readMoreContainer);
     }
