@@ -17,6 +17,14 @@ body {
   background-color: #f7931e;
 }
 
+.navbar {
+  transition: height 0.3s ease;
+}
+nav.scrolled {
+  height: 40px;
+  transition: height 0.3s ease;
+}
+
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
