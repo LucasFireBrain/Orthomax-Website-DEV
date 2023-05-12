@@ -13,17 +13,24 @@ body {
 }
 
 /* Navbar styles */
+nav {
+  transition: height 0.2s ease;
+  height: 60px; /* Adjust the initial height as needed */
+}
+
+nav.scrolled {
+  transition: height 0.3s ease;
+  height: 40px; /* Adjust the scrolled height as needed */
+}
+
 .navbar {
   background-color: #f7931e;
 }
 
-.navbar {
-  transition: height 0.3s ease;
+.navbar.scrolled {
+  box-shadow: 0 0 10px #7e7e7e85;
 }
-nav.scrolled {
-  height: 40px;
-  transition: height 0.3s ease;
-}
+
 
 .navbar-brand {
   font-size: 24px;

@@ -18,12 +18,15 @@ $(document).ready(function () {
 
   window.addEventListener('scroll', function() {
     var navBar = document.querySelector('nav');
-    if (window.scrollY > 0) {
+    
+    if (window.scrollY > 40) {
       navBar.classList.add('scrolled');
     } else {
       navBar.classList.remove('scrolled');
     }
   });
+
+  
 
   // Back to top button
   var backToTopButton = $('#back-to-top');
