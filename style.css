@@ -1,0 +1,355 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #f7931e;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar-nav .nav-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f7931e;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Hero section styles */
+#hero {
+  background: url('https://storage.googleapis.com/chile-travel-newsite-static-content/2021/08/Vitrina_Centro_santiago.jpg') fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+#hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+#hero .btn-primary {
+  background-color: #f7931e;
+  border-color: #f7931e;
+}
+
+#hero .btn-primary:hover {
+  background-color: #e6871d;
+  border-color: #e6871d;
+}
+
+/* About section styles */
+#about {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+}
+
+#about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#about p {
+  overflow: hidden;
+  max-height: 200px; /* Set the desired height to show by default */
+  transition: max-height 0.3s ease;
+}
+
+#about p.expanded {
+  max-height: none; /* Expand the height to show all content */
+}
+
+/* Our Products section styles */
+#products {
+  padding: 80px 0;
+}
+
+#products h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  /* Adjust the value as needed */
+  overflow: hidden;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 500px;
+  /* Adjust the value as needed */
+  margin: 0 auto;
+}
+
+#productCarousel {
+  max-height: 500px;
+  /* Adjust the value as needed */
+  overflow: hidden;
+}
+
+.carousel-image {
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.carousel .carousel-control-prev:hover,
+.carousel .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel .carousel-control-prev-icon,
+.carousel .carousel-control-next-icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+.carousel .carousel-control-prev-icon:before {
+  content: "\f104";
+  /* Font Awesome chevron-left icon */
+}
+
+.carousel .carousel-control-next-icon:before {
+  content: "\f105";
+  /* Font Awesome chevron-right icon */
+}
+
+
+
+/* Events section styles */
+#events {
+  padding: 80px 0;
+}
+
+#events h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#events .event {
+  margin-bottom: 30px;
+}
+
+.event-date {
+  font-size: 16px;
+  color: #999999;
+  margin-bottom: 10px;
+}
+
+.event-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.event-description {
+  font-size: 16px;
+}
+
+/* Our Staff section styles */
+#staff {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Center the grid horizontally */
+}
+
+.staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.staff-member {
+  text-align: center;
+  margin-bottom: 40px;
+  width: calc(100% / 6); /* Set width for 6 columns */
+}
+
+.staff-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adjust the values as needed */
+}
+
+.staff-member .caption {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #5f5f5f;
+}
+
+.staff-member:hover {
+  transform: scale(1.1);
+}
+
+.staff-member:hover .caption {
+  color: #232323;
+}
+
+.staff-member h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.staff-member p {
+  font-size: 16px;
+}
+
+/* read more buttons */
+.read-more-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.read-more-container button {
+  background-color: #f8f8f8;
+  border: 1px solid #333;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Back to top button styles */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #f7931e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #333333;
+  padding: 40px 0;
+  color: #ffffff;
+}
+
+footer h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f7931e;
+}
