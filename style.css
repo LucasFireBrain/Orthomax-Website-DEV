@@ -369,8 +369,8 @@ footer h4 {
 }
 
 footer p {
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 16px;
 }
 
 footer a {
@@ -380,4 +380,59 @@ footer a {
 
 footer a:hover {
   color: #f7931e;
+}
+
+/* Adjust the size of social media links */
+.social-media-links i {
+  font-size: 28px;
+}
+
+/* Add some spacing between social media links */
+.social-media-links i {
+  justify-content: center; /* Center horizontally */
+  margin-right: 18px;
+  margin-top: 18px;
+  margin-left: 18px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info .icon {
+  padding: 10px;
+}
+
+.contact-info .info {
+  margin-left: 10px;
+}
+
+.contact-info .info p {
+  margin: 0;
+}
+
+.contact-info:hover {
+  color: #f7931e; /* Change to desired hover color */
+  cursor: pointer;
+}
+
+.copied-bubble {
+  position: fixed; /* Update the position to fixed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bebebe;
+  color: #3f3f3f;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevents the bubble from affecting mouse interactions */
+}
+
+.copied-bubble.active {
+  opacity: 1;
 }

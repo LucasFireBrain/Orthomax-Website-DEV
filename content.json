@@ -1,6 +1,7 @@
 {
     "es": {
       "buttons": {
+        "textCopied": "Texto Copiado",
         "readMore": "Leer Mas",
         "readLess": "Colapsar",
         "about": "Quienes Somos",
@@ -32,6 +33,7 @@
     },
     "en": {
       "buttons": {
+        "textCopied": "Text Copied",
         "readMore": "Read More",
         "readLess": "Collapse",
         "about": "About Us",
@@ -63,6 +65,7 @@
     },
     "cn": {
       "buttons": {
+        "textCopied": "",
         "readMore": "阅读更多",
         "readLess": "阅读",
         "about": "关于我们",

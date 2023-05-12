@@ -29,7 +29,7 @@ $(document).ready(function () {
   // UpdateScrollPos
 
   // Event listener to scroll to top when the page is loaded
-  window.onload = document.documentElement.scrollBy(0,1);
+  window.onload = document.documentElement.scrollBy(0, 1);
 
   // Back to top button
   var backToTopButton = $('#back-to-top');
@@ -155,7 +155,7 @@ $(document).ready(function () {
       readMoreButton.addEventListener('click', function () {
         aboutContent.classList.toggle('expanded');
         if (aboutContent.classList.contains('expanded')) {
-          readMoreButton.textContent = languageData[getLanguage()].buttons.readLess;;
+          readMoreButton.textContent = languageData[getLanguage()].buttons.readLess;
         } else {
           readMoreButton.textContent = languageData[getLanguage()].buttons.readMore;
         }
@@ -182,5 +182,58 @@ $(document).ready(function () {
       setLanguage(storedLanguage);
     }
   });
+
+  // Get all .contact-info elements
+  const contactInfoElements = document.querySelectorAll('.contact-info');
+
+  // Create the "Text Copied" bubble element
+  const bubble = document.createElement('div');
+  bubble.classList.add('copied-bubble');
+  bubble.textContent = languageData[getLanguage()].buttons.textCopied;
+
+  // Append the bubble to the body
+  document.body.appendChild(bubble);
+
+  // Loop through each .contact-info element
+  contactInfoElements.forEach(contactInfo => {
+    // Get the .copy-text element inside the current .contact-info element
+    const copyTextElement = contactInfo.querySelector('.copy-text');
+
+    // Add click event listener to the current .contact-info element
+    contactInfo.addEventListener('click', () => {
+      // Create a temporary textarea element to hold the text to be copied
+      const textarea = document.createElement('textarea');
+      textarea.value = copyTextElement.textContent;
+
+      // Append the textarea to the body
+      document.body.appendChild(textarea);
+
+      // Select the text inside the textarea
+      textarea.select();
+
+      // Copy the selected text to the clipboard
+      document.execCommand('copy');
+
+      // Remove the temporary textarea element
+      document.body.removeChild(textarea);
+
+      // Position the bubble next to the cursor
+      const rect = contactInfo.getBoundingClientRect();
+      const mouseX = rect.left + rect.width / 2;
+      const mouseY = rect.top;
+      bubble.style.left = mouseX + 'px';
+      bubble.style.top = mouseY + 'px';
+
+      // Show the bubble
+      bubble.classList.add('active');
+
+      // Hide the bubble after a delay
+      setTimeout(() => {
+        bubble.classList.remove('active');
+      }, 800);
+    });
+  });
+
+
 
 });
